@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:background="#cccccc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/arla"
+            android:id="@+id/photo_source" />
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/back"
+            android:gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/back" />
+        <TextView
+            android:id="@+id/name"
+            android:text="Ver"
+            android:textSize="25sp"
+            android:textColor="#ffffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentBottom="true" />
+        <Button
+            android:id="@+id/star"
+            android:background="@mipmap/empty_star"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/price"
+                    android:textSize="15sp"
+                    android:textColor="#d5000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="$132.59" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/price">
+                    <TextView
+                        android:id="@+id/type"
+                        android:textSize="15sp"
+                        android:textColor="#8a000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="重量" />
+
+                    <TextView
+                        android:id="@+id/formore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300g"
+                        android:textColor="#8a000000"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <ImageView
+                    android:background="#1e000000"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:layout_toLeftOf="@+id/img_shoplist"
+                    android:layout_alignTop="@+id/img_shoplist"
+                    android:layout_alignBottom="@+id/img_shoplist"
+                    android:layout_centerVertical="true" />
+                <Button
+                    android:id="@+id/img_shoplist"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@mipmap/shoplist"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:background="#1e000000"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp" />
+            <TextView
+                android:text="更多产品信息"
+                android:textSize= "18sp"
+                android:textColor="#d5000000"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:background="#1e000000"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/info_list"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>
